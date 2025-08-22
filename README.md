@@ -1,6 +1,4 @@
-# Cyber-Security-Automation-Project-2
-
-# Automating Email Threat Analysis & SIEM Integration
+# Cyber-Security-Automation-Project-2: Real Time Email Analysis & SIEM Integration
 
 ## Overview
 This project implements a **cybersecurity automation workflow** that continuously monitors, analyzes, and responds to email-based threats by integrating with threat intelligence platforms and security monitoring systems. Since **email remains the primary attack vector** for cyber threats, this solution provides critical defense capabilities through automated detection and SIEM integration.
