@@ -10,7 +10,6 @@ import re
 import base64
 from dotenv import load_dotenv
 
-# 🔧 Do not forget, we are loading our secrets from our .env, so first we load the secrets.
 load_dotenv()
 
 EMAIL_USER = os.getenv('EMAIL_USER')
@@ -19,8 +18,8 @@ VT_API_KEY = os.getenv('VT_API_KEY')
 SPLUNK_TOKEN = os.getenv('SPLUNK_TOKEN')
 SPLUNK_URL = os.getenv('SPLUNK_URL')
 IMAP_SERVER = 'imap.gmail.com'
-FOLDERS = ['INBOX', '[Gmail]/Spam'] # 📂 We are telling our script to read both inbox and Spam folder
-CHECK_INTERVAL = 4 * 60  # ⏰ This means python will read the inbox after every 4 minutes 
+FOLDERS = ['INBOX', '[Gmail]/Spam']
+CHECK_INTERVAL = 4 * 60 
 
 seen_uids = set()
 
@@ -45,7 +44,7 @@ def vt_scan_url(url):
         if res.status_code != 200:
             return {"error": f"❌ submit failed: {res.status_code}"}
         analysis_id = res.json()["data"]["id"]
-        time.sleep(15)  # ⏳ Wait for VT analysis
+        time.sleep(15)
 
         res2 = requests.get(f'https://www.virustotal.com/api/v3/analyses/{analysis_id}', headers=headers)
 
