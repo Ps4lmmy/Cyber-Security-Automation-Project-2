@@ -1,6 +1,6 @@
 # Cyber-Security-Automation-Project-2: Real Time Email Analysis & SIEM Integration
 
-## Overview
+## 📌 Overview
 This project implements a **cybersecurity automation workflow** that continuously monitors, analyzes, and responds to email-based threats by integrating with threat intelligence platforms and security monitoring systems. Since **email remains the primary attack vector** for cyber threats, this solution provides critical defense capabilities through automated detection and SIEM integration.
 
 The Python-based automation system:
@@ -11,7 +11,7 @@ The Python-based automation system:
 
 ---
 
-## Architecture Components
+## 🏗️ Architecture Components
 
 ### 1. Email Access Layer (Gmail/IMAP)
 - Secure IMAP connection to retrieve emails from both primary inbox and spam folder
@@ -39,7 +39,7 @@ The Python-based automation system:
 ```
 
 ---
-## Configuration
+## ⚙️ Configuration
 Sensitive credentials are managed through environment variables in a `.env` file:
 ```bash
 EMAIL_USER=your_email@gmail.com
@@ -50,7 +50,7 @@ SPLUNK_URL=https://yoursplunkserver:8088
 ```
 
 ---
-## Implementation Scripts
+## 🛠️ Implementation Scripts
 
 ### 1. **Phishing Simulation Tool (`send_email.py`)**
 - Generates **10 simulated phishing emails** (1 per minute interval)
@@ -77,7 +77,7 @@ SPLUNK_URL=https://yoursplunkserver:8088
 7. Execute continuous monitoring cycle (4-minute intervals)
 
 ---
-## Security & Operational Considerations
+## 🔒 Security & Operational Considerations
 - Gmail requires IMAP access and App Password authentication
 - VirusTotal API implements rate limiting - appropriate throttling implemented
 - Splunk HEC must be properly configured and network accessible
@@ -85,7 +85,7 @@ SPLUNK_URL=https://yoursplunkserver:8088
 - All sensitive credentials stored externally in environment variables
 
 ---
-## Practical Applications
+## 🎯 Practical Applications
 When combined, both scripts create a comprehensive testing and detection environment:
 - **Phishing Simulation**: generates realistic test data for validation
 - **Threat Detection**: identifies and analyzes potential email threats
@@ -98,7 +98,7 @@ When combined, both scripts create a comprehensive testing and detection environ
 - **Incident response workflow** automation
 
 ---
-## Installation & Deployment
+## 📥 Installation & Deployment
 
 1. Clone the repository:
    ```bash
@@ -128,7 +128,7 @@ When combined, both scripts create a comprehensive testing and detection environ
    ```
 
 ---
-## Splunk Dashboard Implementation
+## 📊 Splunk Dashboard Implementation
 The solution enables comprehensive Splunk dashboards for:
 - **Email Traffic Monitoring**: Date, sender, subject, and content analysis
 - **Threat Indicator Tracking**: URLs flagged by VirusTotal scanning
@@ -136,7 +136,7 @@ The solution enables comprehensive Splunk dashboards for:
 - **Real-Time Alerting**: Automated correlation with existing security data
 
 ---
-## Conclusion
+## ✅ Conclusion
 This project provides a **production-ready framework** for building automated email security pipelines using **Python, VirusTotal, and Splunk**. It demonstrates practical implementation of security automation that proactively defends against **email-borne threats** through continuous monitoring, threat intelligence integration, and centralized SIEM correlation.
 
 The solution offers organizations a scalable blueprint for enhancing their email security posture through automation, structured analysis, and integrated security monitoring.
